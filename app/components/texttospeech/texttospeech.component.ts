@@ -1,5 +1,5 @@
 // Angular
-import { Component, ElementRef, ViewChild } from "@angular/core";
+import { Component, ElementRef, ViewChild, OnInit } from "@angular/core";
 
 // Plugins
 import { TNSTextToSpeech, SpeakOptions } from "nativescript-texttospeech";
@@ -17,16 +17,21 @@ import { MenuComponent } from "../../shared/menu/menu.component";
   selector: "texttospeech",
   templateUrl: "texttospeech.component.html"
 })
-export class TextToSpeechComponent {
+export class TextToSpeechComponent implements OnInit {
   pitch: number;
   rate: number;
   locale: string;
   text: string;
   volume: number;
+  private text2speech: TNSTextToSpeech;
 
   @ViewChild("videoplayer") VideoPlayerTTS: ElementRef;
 
   constructor(private menuComponent: MenuComponent) {}
+
+  ngOnInit() {
+    this.text2speech = new TNSTextToSpeech();
+  }
 
   toggleDrawer(): void {
     this.menuComponent.toggleMenu();
@@ -37,26 +42,14 @@ export class TextToSpeechComponent {
   }
 
   speak() {
-    let TTS = new TNSTextToSpeech();
-
     let speakOptions: SpeakOptions = {
       text: this.text, /// *** required ***
       speakRate: this.rate, // optional - default is 1.0
       pitch: this.pitch, // optional - default is 1.0
       locale: this.locale,
-      finishedCallback: Function // optional
+      finishedCallback: () => {}
     };
-
-    // Call the `speak` method passing the SpeakOptions object
-
-    TTS.speak(speakOptions).then(
-      () => {
-        // everything is fine
-      },
-      err => {
-        // oops, something went wrong!
-      }
-    );
+    this.text2speech.speak(speakOptions);
   }
 
   setUSA() {

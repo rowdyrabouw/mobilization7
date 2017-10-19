@@ -16,6 +16,11 @@
                     <Label class="sidedrawer-item-text" [text]="'HOME.TITLE' | translate" col="1"></Label>
                 </GridLayout>
 
+                <!-- IOS -->
+                <GridLayout columns="30 *" orientation="horizontal" class="sidedrawer-item">
+                    <Label class="sidedrawer-item-text" style="font-weight: bold" text="iOS" col="1"></Label>
+                </GridLayout>
+
                 <!-- NATIVE SLIDER -->
                 <GridLayout columns="30 *" orientation="horizontal" class="sidedrawer-item" [nsRouterLink]="['/slider/']" nsRouterLinkActive="sidedrawer-item--active"
                     [nsRouterLinkActiveOptions]="{exact:true}">
@@ -30,18 +35,23 @@
                     <Label class="sidedrawer-item-text" [text]="'VIDEO.TITLE' | translate" col="1"></Label>
                 </GridLayout>
 
+                <!-- TEXT TO SPEECH -->
+                <GridLayout columns="30 *" orientation="horizontal" class="sidedrawer-item" [nsRouterLink]="['/texttospeech/']" nsRouterLinkActive="sidedrawer-item--active"
+                    [nsRouterLinkActiveOptions]="{exact:true}">
+                    <Label class="sidedrawer-item-icon fa" [text]="'fa-comments' | fonticon" col="0"></Label>
+                    <Label class="sidedrawer-item-text" [text]="'TEXTTOSPEECH.TITLE' | translate" col="1"></Label>
+                </GridLayout>
+
+                <!-- ANDROID -->
+                <GridLayout columns="30 *" orientation="horizontal" class="sidedrawer-item">
+                    <Label class="sidedrawer-item-text" style="font-weight: bold" text="Android" col="1"></Label>
+                </GridLayout>
+
                 <!-- SOUNDBOARD -->
                 <GridLayout columns="30 *" orientation="horizontal" class="sidedrawer-item" [nsRouterLink]="['/soundboard/']" nsRouterLinkActive="sidedrawer-item--active"
                     [nsRouterLinkActiveOptions]="{exact:true}">
                     <Label class="sidedrawer-item-icon fa" [text]="'fa-soundcloud' | fonticon" col="0"></Label>
                     <Label class="sidedrawer-item-text" [text]="'SOUNDBOARD.TITLE' | translate" col="1"></Label>
-                </GridLayout>
-
-                <!-- MIP -->
-                <GridLayout columns="30 *" orientation="horizontal" class="sidedrawer-item" [nsRouterLink]="['/scan/']" nsRouterLinkActive="sidedrawer-item--active"
-                    [nsRouterLinkActiveOptions]="{exact:true}">
-                    <Label class="sidedrawer-item-icon fa" [text]="'fa-android' | fonticon" col="0"></Label>
-                    <Label class="sidedrawer-item-text" [text]="'MIP.TITLE' | translate" col="1"></Label>
                 </GridLayout>
 
                 <!-- FINGERPRINT -->
@@ -51,13 +61,6 @@
                     <Label class="sidedrawer-item-text" [text]="'FINGERPRINT.TITLE' | translate" col="1"></Label>
                 </GridLayout>
 
-                <!-- TEXT TO SPEECH -->
-                <GridLayout columns="30 *" orientation="horizontal" class="sidedrawer-item" [nsRouterLink]="['/texttospeech/']" nsRouterLinkActive="sidedrawer-item--active"
-                    [nsRouterLinkActiveOptions]="{exact:true}">
-                    <Label class="sidedrawer-item-icon fa" [text]="'fa-comments' | fonticon" col="0"></Label>
-                    <Label class="sidedrawer-item-text" [text]="'TEXTTOSPEECH.TITLE' | translate" col="1"></Label>
-                </GridLayout>
-
                 <!-- SPEECHRECOGNITION -->
                 <GridLayout columns="30 *" orientation="horizontal" class="sidedrawer-item" [nsRouterLink]="['/speechrecognition/']" nsRouterLinkActive="sidedrawer-item--active"
                     [nsRouterLinkActiveOptions]="{exact:true}">
@@ -65,8 +68,12 @@
                     <Label class="sidedrawer-item-text" [text]="'SPEECHRECOGNITION.TITLE' | translate" col="1"></Label>
                 </GridLayout>
 
-
-
+                <!-- MIP -->
+                <GridLayout columns="30 *" orientation="horizontal" class="sidedrawer-item" [nsRouterLink]="['/scan/']" nsRouterLinkActive="sidedrawer-item--active"
+                    [nsRouterLinkActiveOptions]="{exact:true}">
+                    <Label class="sidedrawer-item-icon fa" [text]="'fa-android' | fonticon" col="0"></Label>
+                    <Label class="sidedrawer-item-text" [text]="'MIP.TITLE' | translate" col="1"></Label>
+                </GridLayout>
 
             </StackLayout>
         </ScrollView>
