@@ -103,6 +103,8 @@ export class SpeechRecognitionComponent implements OnInit {
   }
 
   private handleFollowUpAction(text: string): void {
+    console.log("handleFollowUp");
+    console.log(text);
     if (text.indexOf("share") > -1 && text.indexOf("selfie") > -1) {
       this.shareSelfie();
     } else if (
@@ -129,6 +131,7 @@ export class SpeechRecognitionComponent implements OnInit {
   }
 
   shareSelfie() {
+    console.log("selfie");
     camera
       .takePicture({
         width: 1000,
@@ -136,6 +139,7 @@ export class SpeechRecognitionComponent implements OnInit {
       })
       .then(imageAsset => {
         new ImageSource().fromAsset(imageAsset).then(imageSource => {
+          console.log("socialshare");
           SocialShare.shareImage(imageSource);
         });
       });
