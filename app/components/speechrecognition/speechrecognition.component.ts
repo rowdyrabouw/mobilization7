@@ -103,11 +103,12 @@ export class SpeechRecognitionComponent implements OnInit {
   }
 
   private handleFollowUpAction(text: string): void {
-    if (text.indexOf("share") > -1 && text.indexOf("self") > -1) {
+    if (text.indexOf("share") > -1 && text.indexOf("selfie") > -1) {
       this.shareSelfie();
     } else if (
       text.indexOf("year") > -1 ||
       text.indexOf("7510") > -1 ||
+      text.indexOf("day") > -1 ||
       text.indexOf("judgement") > -1
     ) {
       this.playAudio();

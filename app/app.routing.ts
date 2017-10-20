@@ -26,7 +26,7 @@ export const AppRoutes: any = [
       { path: "video", component: VideoComponent },
       { path: "soundboard", component: SoundBoardComponent },
       { path: "scan", component: ScanComponent },
-      { path: "mip", component: MipComponent },
+      // { path: "mip", component: MipComponent },
       { path: "fingerprint", component: FingerprintComponent },
       { path: "texttospeech", component: TextToSpeechComponent },
       { path: "speechrecognition", component: SpeechRecognitionComponent }

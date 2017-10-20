@@ -10,11 +10,11 @@
 
 <ScrollView>
     <StackLayout class="page">
-        <Button text="checkPermissions" (tap)="checkPermissions()"></Button>
-        <Button text="startListening" (tap)="startListening()"></Button>
-        <Button text="stopListening" (tap)="stopListening()"></Button>
-        <Label text="Google Assistent" textWrap="true"></Label>
-        <Label [text]="recognizedText" textWrap="true"></Label>
+        <Button text="checkPermissions" (tap)="checkPermissions()" class="button button-dark"></Button>
+        <Button text="startListening" (tap)="startListening()" class="button button-dark"></Button>
+        <Button text="stopListening" (tap)="stopListening()" class="button button-dark"></Button>
+        <!-- <Label text="Google Assistent" textWrap="true"></Label> -->
+        <Label [text]="recognizedText" textWrap="true" class="header" style="padding-top: 50; font-size: 40;"></Label>
 
     </StackLayout>
 </ScrollView>

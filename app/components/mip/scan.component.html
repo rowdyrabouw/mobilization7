@@ -9,29 +9,26 @@
 </ActionBar>
 
 <ScrollView>
-	<DockLayout>
-		<Button dock="top" text="GetPermissions" (tap)="getPermissions()"></Button>
-		<Button dock="top" text="Scan" (tap)="scan()"></Button>
-		<Button dock="top" text="MIP" (tap)="doSound()"></Button>
-		<Button dock="top" text="light" (tap)="doColor()"></Button>
-
-		<Button dock="top" text="forward" (tap)="moveForward()"></Button>
-
-		<Label [text]="'fa-arrow-circle-o-left' | fonticon" (tap)="turnLeft()" class="fa fa-icon"></Label>
-		<Label [text]="'fa-arrow-circle-o-up' | fonticon" (tap)="moveForward()" class="fa fa-icon"></Label>
-		<Label [text]="'fa-arrow-circle-o-down' | fonticon" (tap)="moveBack()" class="fa fa-icon"></Label>
-		<Label [text]="'fa-arrow-circle-right' | fonticon" (tap)="turnRight()" class="fa fa-icon"></Label>
-
-
-
+	<StackLayout>
+		<Label class="button" text="GetPermissions" (tap)="getPermissions()" class="button button-dark"></Label>
+		<Label class="button" text="Scan for MiP" (tap)="scan()" class="button button-dark"></Label>
 		<ListView [items]="devicesAround" (itemTap)="connect($event)">
 			<ng-template let-item="item">
-				<StackLayout padding="5 10 5 10" style="background-color: #7fff7f;">
+				<StackLayout padding="5 10 5 10">
 					<Label [text]="item.UUID"></Label>
 					<Label [text]="item.name"></Label>
-					<Label [text]="item.state"></Label>
 				</StackLayout>
 			</ng-template>
 		</ListView>
-	</DockLayout>
+		<Label class="button" text="Make some noise!" (tap)="doSound()" class="button button-dark" style="margin-top: 60"></Label>
+		<Label class="button" text="Light it up!" (tap)="doColor()" class="button button-dark"></Label>
+		<Label class="button" text="Wink wink" (tap)="doWink()" class="button button-dark"></Label>
+		<FlexboxLayout alignItems="center" justifyContent="space-around" style="padding-top: 30">
+			<Label [text]="'fa-arrow-circle-o-left' | fonticon" (tap)="turnLeft()" class="fa fa-icon" col="0"></Label>
+			<Label [text]="'fa-arrow-circle-o-up' | fonticon" (tap)="moveForward()" class="fa fa-icon" col="1"></Label>
+			<Label [text]="'fa-arrow-circle-o-down' | fonticon" (tap)="moveBack()" class="fa fa-icon" col="2"></Label>
+			<Label [text]="'fa-arrow-circle-o-right' | fonticon" (tap)="turnRight()" class="fa fa-icon" col="3"></Label>
+		</FlexboxLayout>
+	</StackLayout>
+
 </ScrollView>

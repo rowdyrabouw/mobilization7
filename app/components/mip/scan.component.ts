@@ -58,8 +58,11 @@ export class ScanComponent {
     AllMips.removeMip(mip);
   }
 
+  private _getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
   doSound() {
-    let soundIndex = 80; // value from 1 - 106
+    let soundIndex = this._getRandomInt(1, 106); // value from 1 - 106
     AllMips.playOneSound(soundIndex, 0, 0);
     // AllMips.setChestLED(255, 0, 0);
   }
@@ -97,8 +100,14 @@ export class ScanComponent {
   }
 
   doColor() {
-    AllMips.setChestLED(166, 0, 21);
-    // AllMips.setHeadLED(2, 1, 0, 3);
+    let red = this._getRandomInt(0, 255);
+    let green = this._getRandomInt(0, 255);
+    let blue = this._getRandomInt(0, 255);
+    AllMips.setChestLED(red, green, blue);
+  }
+
+  doWink() {
+    AllMips.setHeadLED(2, 2, 0, 0);
   }
 
   toggleDrawer(): void {
