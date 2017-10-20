@@ -9,19 +9,20 @@
     </StackLayout>
 </ActionBar>
 
-<ScrollView style="height: 100%; background-color: rgb(48, 51, 22);">
+<ScrollView class="scrollview">
     <StackLayout>
-        <StackLayout style="height: 150; background-color: rgb(173, 203, 203);">
+        <StackLayout class="sky">
         </StackLayout>
         <StackLayout>
-            <Image class="picture" src="~/assets/images/mobilization-poster.jpg"></Image>
+            <Image class="picture " src="~/assets/images/mobilization-poster.jpg "></Image>
         </StackLayout>
-        <StackLayout class="pt20">
-            <Label [text]="'HOME.TAGLINE' | translate" class="header header-light"></Label>
-            <GridLayout rows="*" columns="*, *" class="pt40">
-                <Button text="English" (tap)="changeLanguage('en')" class="button button-small" row="0" col="0"></Button>
-                <Button text="Polski" (tap)="changeLanguage('pl')" class="button button-small" row="0" col="1"></Button>
-            </GridLayout>
+        <StackLayout class="pt20 ">
+            <Label [text]=" 'HOME.TAGLINE' | translate " class="header header-light "></Label>
+
+            <!-- GridLayout (pt40) 1 row, 2 columns -->
+            <!-- Button (button button-small) changeLanguage to en -->
+            <!-- Button (button button-small) changeLanguage to pl -->
+
         </StackLayout>
     </StackLayout>
 </ScrollView>

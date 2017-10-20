@@ -1,0 +1,34 @@
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360);
+  }
+}
+.spin {
+  animation-name: spin;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  width: 250;
+  height: 250;
+  margin: 40 0;
+}
+
+.form {
+  margin-top: 20;
+}
+
+/* @import "/nativescript-theme-core/css/aqua.css"; */
+/* @import "/nativescript-theme-core/css/blue.css"; */
+/* @import "/nativescript-theme-core/css/brown.css"; */
+/* @import "/nativescript-theme-core/css/forest.css"; */
+/* @import "/nativescript-theme-core/css/grey.css"; */
+/* @import "/nativescript-theme-core/css/lemon.css"; */
+/* @import "/nativescript-theme-core/css/lime.css"; */
+/* @import "/nativescript-theme-core/css/orange.css"; */
+/* @import "/nativescript-theme-core/css/purple.css"; */
+/* @import "/nativescript-theme-core/css/ruby.css"; */
+/* @import "/nativescript-theme-core/css/sky.css"; */

@@ -3,7 +3,8 @@ import { Component, OnInit } from "@angular/core";
 
 // Plugins
 import { TNSPlayer } from "nativescript-audio";
-import { TranslateService } from "@ngx-translate/core";
+
+// import TranslateService from @ngx-translate/core
 
 // Shared
 import { MenuComponent } from "../../shared/menu/menu.component";
@@ -11,18 +12,14 @@ import { MenuComponent } from "../../shared/menu/menu.component";
 @Component({
   moduleId: module.id,
   selector: "home",
-  templateUrl: "home.component.html"
+  templateUrl: "home.component.html",
+  styleUrls: ["home.component.css"]
 })
 export class HomeComponent implements OnInit {
   private _player: TNSPlayer;
-  public constructor(
-    private menuComponent: MenuComponent,
-    private translate: TranslateService
-  ) {}
 
-  toggleDrawer(): void {
-    this.menuComponent.toggleMenu();
-  }
+  // inject translateService in constructor
+  constructor(private menuComponent: MenuComponent) {}
 
   ngOnInit() {
     this._player = new TNSPlayer();
@@ -30,6 +27,10 @@ export class HomeComponent implements OnInit {
       audioFile: "~/assets/audio/testing.mp3", // ~ = app directory
       loop: false
     });
+  }
+
+  toggleDrawer(): void {
+    this.menuComponent.toggleMenu();
   }
 
   toggleAudio() {
@@ -41,7 +42,5 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  public changeLanguage(lang: string) {
-    this.translate.use(lang);
-  }
+  // changeLanguage method to use translateService with lang param
 }

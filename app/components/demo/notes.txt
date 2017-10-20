@@ -1,0 +1,32 @@
+<ActionBar title="Demo" class="action-bar"></ActionBar>
+<ScrollView>
+    <StackLayout class="page">
+
+        <Image src="~/assets/images/mobilization.png" class="spin"></Image>
+
+        <Label text="{{someText}}" textWrap="true" class="h1 center"></Label>
+
+        <StackLayout class="hr-dark"></StackLayout>
+
+        <StackLayout class="form">
+            <StackLayout class="input-field">
+                <TextField hint="Type some text" [(ngModel)]="someText" class="input"></TextField>
+                <StackLayout class="hr-light"></StackLayout>
+            </StackLayout>
+        </StackLayout>
+
+        <Switch [checked]="false" class="switch"></Switch>
+
+        <Button text="tap me" (tap)="buttonTap()" class="btn btn-primary"></Button>
+
+    </StackLayout>
+</ScrollView>
+
+<Label text="home" [nsRouterLink]="['/home']" textWrap="true"></Label>
+
+
+someText: string = "Hello world!";
+
+buttonTap() {
+    alert("You tapped me!");
+}

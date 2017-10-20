@@ -1,0 +1,13 @@
+<GridLayout rows="* " columns="*, * " class="pt40">
+    <Button text="English " (tap)="changeLanguage('en') " class="button button-small " row="0 " col="0 "></Button>
+    <Button text="Polski " (tap)="changeLanguage('pl') " class="button button-small " row="0 " col="1 "></Button>
+</GridLayout>
+
+
+import { TranslateService } from "@ngx-translate/core";
+
+private translateService: TranslateService
+
+changeLanguage(lang: string) {
+    this.translateService.use(lang);
+}

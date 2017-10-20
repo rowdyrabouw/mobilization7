@@ -12,12 +12,12 @@ export class SliderIconDirective {
   constructor(private el: ElementRef) {}
 
   ngOnInit() {
-    if (isIOS) {
-      // let uiSlider = this.el.nativeElement.ios;
-      // uiSlider.setThumbImageForState(
-      //   UIImage.imageNamed("mobilization.png"),
-      //   UIControlState.Normal
-      // );
-    }
+    // if (isIOS) {
+    //   let uiSlider = this.el.nativeElement.ios;
+    //   uiSlider.setThumbImageForState(
+    //     UIImage.imageNamed("mobilization.png"),
+    //     UIControlState.Normal
+    //   );
+    // }
   }
 }

@@ -1,0 +1,9 @@
+.scrollview {
+  height: 100%;
+  background-color: rgb(48, 51, 22);
+}
+
+.sky {
+  height: 150;
+  background-color: rgb(173, 203, 203);
+}

@@ -1,5 +1,6 @@
 import { HomeWrapperComponent } from "./components/home/home-wrapper.component";
 import { HomeComponent } from "./components/home/home.component";
+import { DemoComponent } from "./components/demo/demo.component";
 import { SliderComponent } from "./components/native/slider.component";
 import { VideoComponent } from "./components/video/video.component";
 import { SoundBoardComponent } from "./components/soundboard/soundboard.component";
@@ -22,6 +23,7 @@ export const AppRoutes: any = [
         children: [{ path: "", component: HomeComponent }]
       },
       { path: "home", component: HomeComponent },
+      { path: "demo", component: DemoComponent },
       { path: "slider", component: SliderComponent },
       { path: "video", component: VideoComponent },
       { path: "soundboard", component: SoundBoardComponent },
@@ -38,6 +40,7 @@ export const AppComponents: any = [
   MenuComponent,
   HomeWrapperComponent,
   HomeComponent,
+  DemoComponent,
   SliderComponent,
   VideoComponent,
   SoundBoardComponent,

@@ -42,16 +42,16 @@
                     <Label class="sidedrawer-item-text" [text]="'TEXTTOSPEECH.TITLE' | translate" col="1"></Label>
                 </GridLayout>
 
-                <!-- ANDROID -->
-                <GridLayout columns="30 *" orientation="horizontal" class="sidedrawer-item">
-                    <Label class="sidedrawer-item-text" style="font-weight: bold" text="Android" col="1"></Label>
-                </GridLayout>
-
                 <!-- SOUNDBOARD -->
                 <GridLayout columns="30 *" orientation="horizontal" class="sidedrawer-item" [nsRouterLink]="['/soundboard/']" nsRouterLinkActive="sidedrawer-item--active"
                     [nsRouterLinkActiveOptions]="{exact:true}">
                     <Label class="sidedrawer-item-icon fa" [text]="'fa-soundcloud' | fonticon" col="0"></Label>
                     <Label class="sidedrawer-item-text" [text]="'SOUNDBOARD.TITLE' | translate" col="1"></Label>
+                </GridLayout>
+
+                <!-- ANDROID -->
+                <GridLayout columns="30 *" orientation="horizontal" class="sidedrawer-item">
+                    <Label class="sidedrawer-item-text" style="font-weight: bold" text="Android" col="1"></Label>
                 </GridLayout>
 
                 <!-- FINGERPRINT -->
