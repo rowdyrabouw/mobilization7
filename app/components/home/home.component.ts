@@ -4,7 +4,7 @@ import { Component, OnInit } from "@angular/core";
 // Plugins
 import { TNSPlayer } from "nativescript-audio";
 
-// import TranslateService from @ngx-translate/core
+import { TranslateService } from "@ngx-translate/core";
 
 // Shared
 import { MenuComponent } from "../../shared/menu/menu.component";
@@ -19,7 +19,10 @@ export class HomeComponent implements OnInit {
   private _player: TNSPlayer;
 
   // inject translateService in constructor
-  constructor(private menuComponent: MenuComponent) {}
+  constructor(
+    private menuComponent: MenuComponent,
+    private translateService: TranslateService
+  ) {}
 
   ngOnInit() {
     this._player = new TNSPlayer();
@@ -43,4 +46,7 @@ export class HomeComponent implements OnInit {
   }
 
   // changeLanguage method to use translateService with lang param
+  changeLanguage(lang: string) {
+    this.translateService.use(lang);
+  }
 }

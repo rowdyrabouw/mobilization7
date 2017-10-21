@@ -19,9 +19,10 @@
         <StackLayout class="pt20 ">
             <Label [text]=" 'HOME.TAGLINE' | translate " class="header header-light "></Label>
 
-            <!-- GridLayout (pt40) 1 row, 2 columns -->
-            <!-- Button (button button-small) changeLanguage to en -->
-            <!-- Button (button button-small) changeLanguage to pl -->
+            <GridLayout rows="* " columns="*, * " class="pt40">
+                <Button text="English " (tap)="changeLanguage('en') " class="button button-small " row="0 " col="0 "></Button>
+                <Button text="Polska " (tap)="changeLanguage('pl') " class="button button-small " row="0 " col="1 "></Button>
+            </GridLayout>
 
         </StackLayout>
     </StackLayout>

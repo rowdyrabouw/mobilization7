@@ -20,7 +20,7 @@ export const AppRoutes: any = [
       {
         path: "",
         component: HomeWrapperComponent,
-        children: [{ path: "", component: DemoComponent }]
+        children: [{ path: "", component: HomeComponent }]
       },
       { path: "home", component: HomeComponent },
       { path: "demo", component: DemoComponent },
